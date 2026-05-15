@@ -1,5 +1,7 @@
 package com.ruoyi.system.domain;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -18,6 +20,7 @@ public class SysNotice extends BaseEntity
     private static final long serialVersionUID = 1L;
 
     /** 公告ID */
+    @TableId
     private Long noticeId;
 
     /** 公告标题 */
@@ -34,6 +37,7 @@ public class SysNotice extends BaseEntity
 
     /** 是否已读 */
     @JsonProperty("isRead")
+    @TableField(exist = false)
     private boolean isRead;
 
     public Long getNoticeId()
