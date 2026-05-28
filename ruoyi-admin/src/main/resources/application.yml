@@ -52,7 +52,7 @@ spring:
     # 国际化资源文件路径
     basename: i18n/messages
   profiles:
-    active: druid
+    active: dm
   # 文件上传
   servlet:
     multipart:
@@ -109,7 +109,7 @@ mybatis:
 
 # PageHelper分页插件
 pagehelper:
-  helperDialect: mysql
+  helperDialect: dm
   supportMethodsArguments: true
   params: count=countSql
 
