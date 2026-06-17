@@ -32,6 +32,7 @@
         <jaxb-api.version>2.3.1</jaxb-api.version>
         <springdoc.version>2.8.16</springdoc.version>
         <mybatis-plus>3.5.15</mybatis-plus>
+        <lombok.version>1.18.32</lombok.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -187,6 +188,19 @@
                 <version>${mybatis-plus}</version>
             </dependency>
 
+            <!-- 业务模块-->
+            <dependency>
+                <groupId>com.ruoyi</groupId>
+                <artifactId>service</artifactId>
+                <version>${ruoyi.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -197,6 +211,7 @@
         <module>ruoyi-quartz</module>
         <module>ruoyi-generator</module>
         <module>ruoyi-common</module>
+        <module>service</module>
     </modules>
     <packaging>pom</packaging>
 
